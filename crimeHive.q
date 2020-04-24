@@ -4,3 +4,7 @@ location '/user/clg469/hiveProject/';
 select year, greatest(murderrate, raperate, robberyrate, assaultrate, propertyrate, burglaryrate, theftrate, mvtrate) as maxrate from crime;
 
 select population from crime;
+
+select violentrate from crime;
+
+select totalviolent from crime;
