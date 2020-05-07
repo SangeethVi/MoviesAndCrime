@@ -1,0 +1,11 @@
+1. Converted the xls file as a csv file
+
+2. From Computer to Dumbo:
+scp ./table-1.csv clg469@dumbo.es.its.nyu.edu:/home/clg469
+
+3. In Dumbo to HDFS:
+hdfs dfs -mkdir project
+hdfs dfs -put table-1.csv project
+
+Original Link to Dataset:
+https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016/tables/table-1/table-1.xls#overview
