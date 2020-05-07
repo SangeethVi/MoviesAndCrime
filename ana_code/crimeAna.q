@@ -54,3 +54,7 @@ ON (crime.year=crimemovies.year);
 create table assaultpercentdiff as
 select (result-assaultrate)/assaultrate as result
 from predictassault;
+
+select AVG(abs(result)) from crimepercentdiff;
+select AVG(abs(result)) from murderpercentdiff;
+select AVG(abs(result)) from assaultpercentdiff;
