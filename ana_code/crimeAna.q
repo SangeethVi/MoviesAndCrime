@@ -27,3 +27,30 @@ FROM crime INNER JOIN crimemovies
 ON (crime.year=crimemovies.year);
 
 select AVG(result) from assaultbycmrate;
+
+create table predictcrime as
+select crime.violentrate, 1176.2858451486848 * crimemovies.cmrate AS result 
+FROM crime INNER JOIN crimemovies
+ON (crime.year=crimemovies.year);
+
+create table crimepercentdiff as
+select (result-violentrate)/violentrate as result
+from predictcrime;
+
+create table predictmurder as
+select crime.murderrate, 14.38742159017673 * crimemovies.cmrate AS result 
+FROM crime INNER JOIN crimemovies
+ON (crime.year=crimemovies.year);
+
+create table murderpercentdiff as
+select (result-murderrate)/murderrate as result
+from predictmurder;
+
+create table predictassault as
+select crime.assaultrate, 731.6848657347505 * crimemovies.cmrate AS result 
+FROM crime INNER JOIN crimemovies
+ON (crime.year=crimemovies.year);
+
+create table assaultpercentdiff as
+select (result-assaultrate)/assaultrate as result
+from predictassault;
