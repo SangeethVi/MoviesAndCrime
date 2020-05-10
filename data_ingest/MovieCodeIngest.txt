@@ -1,0 +1,5 @@
+1. scp IMDB-Movie-Data.csv to Dumbo
+2. Put the file in HDFS with:
+   hdfs dfs -mkdir $path/movies
+   hdfs dfs -put IMDB-Movie-Data.csv $path/movies 
+Original data can be found in https://www.kaggle.com/PromptCloudHQ/imdb-data
